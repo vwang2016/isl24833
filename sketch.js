@@ -55,7 +55,7 @@ function setup() {
 
 
   // Don't loop automatically
-  //noLoop();
+  noLoop();
   socket = new WebSocket('ws://localhost:8080/ws');
   // socket connection listener:
   socket.onopen = sendIntro;
@@ -68,12 +68,11 @@ function setup() {
 function sendIntro() {
   // convert the message object to a string and send it:
   socket.send("Hello HID");
-  label = 'Socket opened';
+//  label = 'Socket opened';
 }
 
 function readMessage(event) {
   var msg = event.data; // read data from the onmessage event
-
   label = msg;
 }
 function draw() {
