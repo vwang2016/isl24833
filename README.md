@@ -1,0 +1,2 @@
+# isl24833
+ISL24833:EEPROM Gamma VCOM
